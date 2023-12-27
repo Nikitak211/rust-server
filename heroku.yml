@@ -1,3 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+    web: docker build -t rust-server:latest .
+run:
+  web: docker run -p 28015:28015/udp -p 28016:28016/tcp rust_server
